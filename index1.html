@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar with Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .carousel-container {
+        transition: transform 0.5s ease-in-out;
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="bg-gray-800 p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <h1 class="h-8 w-auto text-5xl text-yellow-500">OKPESA</h1>
+        </div>
+
+        <div class="hidden md:flex space-x-4">
+          <a href="#home" class="text-white hover:text-gray-300">Home</a>
+          <a href="#about" class="text-white hover:text-gray-300">About</a>
+          <a href="#services" class="text-white hover:text-gray-300"
+            >Services</a
+          >
+          <a href="#contact" class="text-white hover:text-gray-300">Contact</a>
+        </div>
+
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-white focus:outline-none">
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="text-white block hover:bg-gray-700 px-3 py-2 rounded-md"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="text-white block hover:bg-gray-700 px-3 py-2 rounded-md"
+            >About</a
+          >
+          <a
+            href="#services"
+            class="text-white block hover:bg-gray-700 px-3 py-2 rounded-md"
+            >Services</a
+          >
+          <a
+            href="#contact"
+            class="text-white block hover:bg-gray-700 px-3 py-2 rounded-md"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero section -->
+    <div class="relative h-screen flex items-center justify-center">
+      <!-- Background image -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://data.0515dyc.com/image/sseo183.webp"
+          alt="Background"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-10 text-center text-white px-4">
+        
+        <div class="bg-black w-[800px] h-[500px] py-16 px-auto flex justify-center">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9IDdHNre0v3RmbVKxBKnbtXgAJhsWy-O_yA&s" alt="">
+        </div>
+        <div class="flex gap-1 justify-center mt-6">
+            <img class="w-[100px] " src="./assets/pc.png" alt="" />
+            <img class="w-[100px] " src="./assets/tablet.png" alt="" />
+            <img class="w-[100px] " src="./assets/phone_straight.png" alt="" />
+          </div>
+      </div>
+    </div>
+    <!-- youtube section -->
+    <div class="bg-black py-16">
+      <div class="flex flex-col md:flex-row gap-10 flex justify-center mx-auto">
+        <div class="flex flex-col gap-4">
+          <img src="./assets/superAce.png" alt="" />
+          <div class="flex flex-col">
+            <button class="bg-yellow-500 mb-3 py-3 text-black">Play Now</button>
+            <div class="flex gap-1">
+              <img src="./assets/pc.png" alt="" />
+              <img src="./assets/tablet.png" alt="" />
+              <img src="./assets/phone_straight.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <h1 class="text-2xl text-white font-bold">Super Ace</h1>
+          <div class="flex gap-4">
+            <div
+              class="bg-gray-800 flex flex-col gap-3 text-white px-2 py-1 w-[250px] rounded-xl px-5 py-6"
+            >
+              <h1>MAX WIN</h1>
+              <h2 class="text-yellow-500 font-bold">1500x</h2>
+            </div>
+            <div
+              class="bg-gray-800 flex flex-col gap-3 text-white px-2 py-1 w-[250px] rounded-xl px-5 py-6"
+            >
+              <h1>VOLATILITY</h1>
+              <h2 class="text-yellow-500 font-bold">LOW-MED 🌶️ 🌶️</h2>
+            </div>
+          </div>
+          <div class="text-white">
+            <div class="flex border-b py-5">
+              <p class="w-[300px] text-yellow-500 font-bold">Type of game:</p>
+              <p>Slot</p>
+            </div>
+            <div class="flex border-b py-5">
+              <p class="w-[300px] text-yellow-500 font-bold">
+                Special Features:
+              </p>
+              <p>Multiplier</p>
+            </div>
+            <div class="flex border-b py-5">
+              <p class="w-[300px] text-yellow-500 font-bold">Paylines:</p>
+              <p>1024 ways</p>
+            </div>
+            <div class="flex border-b py-5">
+              <p class="w-[300px] text-yellow-500 font-bold">Publish Time:</p>
+              <p>2020.08</p>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-800 text-white px-2 py-1 flex gap-2 justify-center mt-6 py-5 rounded-xl"
+          >
+            <img src="/assets/flag_ENG.png" alt="" class="w-10" />
+            <img src="./assets/flag_CN.png" alt="" class="w-10" />
+            <img src="./assets/flag_JP.png" alt="" class="w-10" />
+            <img src="./assets/flag_KR.png" alt="" class="w-10" />
+            <img src="./assets/flag_MM.png" alt="" class="w-10" />
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto flex justify-center container py-16">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/nFuNcPce02Q?si=d3Dis0ApKT-k1rDn"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    <!-- carousel area with controols showing 3 products per view -->
+    <section class="bg-gray-900 py-10">
+      <div class="max-w-2xl mx-auto">
+        <div class="relative overflow-hidden">
+          <div id="carousel" class="carousel-container flex">
+            <img
+              src="./assets//slide1.png"
+              alt="Image 1"
+              class="w-full flex-shrink-0"
+            />
+            <img
+              src="./assets/slide2.png"
+              alt="Image 2"
+              class="w-full flex-shrink-0"
+            />
+            <img
+              src="./assets/slide3.png"
+              alt="Image 3"
+              class="w-full flex-shrink-0"
+            />
+          </div>
+        </div>
+
+        <div class="flex justify-center mt-4">
+          <button
+            id="prevBtn"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-l"
+          >
+            Previous
+          </button>
+          <button
+            id="nextBtn"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+      <div class="container mx-auto">
+        <h1 class="text-yellow-500 text-2xl px-20 mb-5">DESCRIPTION</h1>
+        <p class="text-xl text-gray-300 px-20">
+          Would you like supreme, amazing, and consecutive winning? Accumulated
+          multipliers via elimination of consecutive winning that will be the
+          more the better！ Free Game is no exception and double multipliers
+          than the main game！ The "Golden Joker" will appear after "Golden
+          Card" has been eliminated that you will enjoy Joker's power！
+        </p>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <div class="bg-black text-white">
+      <div
+        class="container py-5 flex sm:flex-col md:flex-row mx-auto justify-between px-40 border-b border-yellow-500 mb-10"
+      >
+        <div>
+          <h1 class="mb-5">OKPESA</h1>
+          <a href="">Youtube</a>
+        </div>
+        <div>
+          <h1 class="mb-5">DISCOVER</h1>
+          <nav class="flex flex-col">
+            <a href="#">HOME</a>
+            <a href="#">COMPANY</a>
+            <a href="#">GAMES</a>
+            <a href="#">CONTACT US</a>
+          </nav>
+        </div>
+        <div class="flex flex-col gap-3">
+          <h1 class="mb-5">LICENSES & CERTIFICATES</h1>
+          <img src="./assets/glc-logo-wb.png" alt="" class="w-[100px]" />
+          <img src="./assets/bmm_testlabs.png" alt="" class="w-[100px]" />
+        </div>
+      </div>
+      <div class="text-center py-10">
+        COPYRIGHT © 2024 OKPESA. ALL RIGHTS RESERVED.
+      </div>
+    </div>
+    <script src="carousel.js"></script>
+  </body>
+</html>
